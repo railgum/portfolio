@@ -106,10 +106,6 @@ body {
   color: #828282;
 }
 
-.portfolio::after {
-  content: " ";
-}
-
 .sub-menu__list {
   display: none;
   position: absolute;
