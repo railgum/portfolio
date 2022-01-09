@@ -1,0 +1,359 @@
+@import url(css/Normalize.css);
+* {
+	margin: 0;
+	padding: 0;
+}
+//@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
+//.contacts__social a {
+//				text-align: center;
+//				width: 48px;
+//				height: 48px;
+//				float: left;
+//				background: #fff;
+//				border: 1px solid #ccc;
+//				box-shadow: 0 2px 4px rgba(0,0,0,0.15), inset 0 0 50px rgba(0,0,0,0.1);
+//				border-radius: 24px;
+//				margin: 0 10px 10px 0;
+//				padding: 6px;
+//				color: #000;
+//		}
+		
+		
+@font-face {
+	font-family: 'Gilroy';
+	src: url('../fonts/10177.eot');
+	src: local('☺'), url('../fonts/10177.woff') format('woff'), url('../fonts/10177.ttf') format('truetype'), url('../fonts/10177.svg') format('svg');
+	font-weight: 500;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Gilroy';
+	src: url('../fonts/10871.eot');
+	src: local('☺'), url('../fonts/10871.woff') format('woff'), url('../fonts/10871.ttf') format('truetype'), url('../fonts/10871.svg') format('svg');
+	font-weight: 600;
+	font-style: normal;
+}
+%font_title {
+	font-size: 34px;
+	line-height: 42px;
+	text-align: center;
+	color: #070707;
+}
+%font_subtitle {
+	font-size: 18px;
+	line-height: 22px;
+	color: #070707;
+}
+%m_label {
+	margin: 23px 0 41px 0;
+	font-size: 14px;
+	line-height: 17px;
+	text-align: center;
+	color: #828282;
+	font-weight: bold;
+} 
+// пытался осуществить возможность выставления звездочек интерактивно (для JS)
+//%style_star_black {
+//	background: #070707;
+//	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	
+//}
+//%style_star_grey {
+//	background: #E5E5E5;
+//	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+//	}
+body {
+	font-family: Gilroy;
+}
+.title {
+	font-weight: bold;
+	@extend %font_title;
+}
+
+.wrapper {
+	max-width: 1445px;
+	min-height: 100vh;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+}
+.container {
+	max-width: 945px;
+	margin: 0 auto;
+}
+.content {
+	flex: 1 1 auto;
+}
+.menu {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 33px;
+	position: relative;
+	&::after {
+		content: ' ';
+			position: absolute;
+			width: 945px;
+			height: 0px;
+			top: 55px;
+			border: 1px solid #828282;
+			transform: matrix(1, 0, 0, 1, 0, 0);
+	}
+	&__link {
+		text-decoration: none;
+		font-size: 18px;
+		line-height: 22px;
+		font-weight: bold;
+		color: #828282;
+	}
+	&__link-active {
+		color: #070707;
+	}
+}
+
+.header {
+	&__content {
+		display: flex;
+		justify-content: space-between;
+	}
+	
+	&__title {
+		width: 200px;
+		margin-top: 72px;
+		text-align: left;
+		font-size: 47.3392px;
+		line-height: 52px;
+		color: #070707;
+	}
+	&__subtitle {
+		@extend %font_subtitle;
+
+		margin-top: 127px;
+	}
+	&__lang {
+		height: 68px;
+		writing-mode: vertical-lr;
+		transform: rotate(-180deg);
+		text-transform: uppercase;
+		margin-top: 98px;
+	}
+	&__lang > a {
+		text-decoration: none;
+		color: #070707;
+	}
+	&__lang > a:first-child::after {
+		content: " |";
+	}
+	&__lang > a:last-child {
+		font-weight: bold;
+	}
+	&__img {
+		width: 945px;
+		height: 387px;
+		margin-top: 50px;
+	}
+}
+.aboutme {
+	min-height: 506px;
+	margin-top: 104px;
+	display: flex;
+	align-items: center;
+	background-color: #F6F6F6;
+	&__title {
+	}
+	&__subtitle {
+		@extend %font_subtitle;
+		margin-top: 18px;
+		max-width: 560px;
+		min-height: 218px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between; 
+		text-align: center;
+	}
+}
+
+.skills {
+	max-width: 100%;
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	&__title {
+		margin-top: 91px;
+		
+	}
+	&__subtitle {
+		@extend %font_subtitle;
+		margin: 69px 0 83px 0;
+	}
+	&__body {
+		width: 100%;
+	}
+	&__row {
+		display: flex;
+		margin: 0 -55px;
+		margin-bottom: 110px;
+	}
+	&__column {
+		padding: 0 55px;
+	}
+	&__item {
+	}
+}
+
+.hyper__text {
+	&-img {
+	}
+	&-label {
+		@extend %m_label;
+	}
+	&-stars > img:nth-last-child(-n+2) {	
+		content: url(../img/free_star.png);
+	}
+	
+}
+
+.cascad__sheet {
+	&-img {
+	}
+	&-label {
+		@extend %m_label;
+	}
+	&-stars > img:nth-last-child(-n+2) {	
+		content: url(../img/free_star.png);
+	}
+}
+
+.java__script {
+	&-img {
+	}
+	&-label {
+		@extend %m_label;
+	}
+	&-stars > img:nth-last-child(-n+3) {	
+		content: url(../img/free_star.png);
+	}
+}
+.figma {
+	&-img {
+	}
+	&-label {
+		@extend %m_label;
+	}
+		&-stars > img:nth-last-child(-n+2) {	
+			content: url(../img/free_star.png);
+	}
+}
+
+.contacts {
+	min-height: 550px;
+	background-color: #f5f981;
+	max-width: 100%;
+	//display: flex;
+	//justify-content: center;
+	//text-align: center;
+	&__row {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		text-align: center;
+	}
+	&__title {
+		padding-top: 114px;
+	}
+	&__text {
+		@extend %font_subtitle;
+		margin: 20px 0 29px 0;
+	}
+	&__message {
+		background: #070707;
+		width: 180px;
+		height: 42px;
+		border-radius: 20px;
+		display: flex;
+		align-items: center;
+    align-self: center;
+		justify-content: center;
+		//opacity: 0.1;
+		//filter: blur(20px);
+		.contacts-btn {
+			@extend %font_subtitle;
+			text-decoration: none;
+			font-weight: bold;
+			color: #FFFFFF;	
+		}
+	}
+	&__social {
+		display: flex;
+    justify-content: center;
+    margin: 85px 0 45px 0;
+		width: 345px;
+		align-self: center;
+    justify-content: space-between;
+		
+	}
+	
+}
+//Соцсети
+//.contacts__instagram a:hover {
+//	background: #d3246b;
+//	 color: #fff;
+//	}
+//.contacts__vc a:hover {
+//	background: #5e83ab;
+//	 color: #fff;
+//	}
+//.contacts__github a:hover {
+//	background: #191919;
+//	color: #fff;
+//  }
+//.contacts__whatsapp a:hover {
+//	background: #50b154;
+//	 color: #fff;
+//	}
+.social {display: inline-block;}
+.social a {
+	display: block;
+	width: 48px;
+	height: 48px;
+	margin: 0 10px 10px 0;
+	text-align: center;
+	color: #fff;
+	border: 1px solid #ccc;
+	border-radius: 24px;
+	box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+}
+.social a:hover {
+	border-color: #888;
+	opacity: .8;
+}
+.social svg {
+	margin-top: 7px;
+	width: 32px;
+	height: 32px;
+}
+.github a {background: #191919}
+.instagram a {background: #3f729b}
+.telegram a {background: #249bd7}
+.vk a {background: #4a76a8}
+
+.footer {
+	height: 130px;
+	background-color: #13051e;
+	
+	&__rigts {
+		max-width: 100%;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+		align-items: center;
+	}
+	&__img {
+		padding-left: 485px;
+		
+	}
+	&__text {
+		justify-content: center;
+		padding-right: 50px;
+		color: #fff;
+	}
+}
