@@ -28,7 +28,7 @@
   color: #070707;
 }
 
-.header__subtitle, .aboutme__subtitle, .skills__subtitle, .contacts__text, .contacts__message .contacts-btn {
+.menu__link, .sub-menu__link, .header__subtitle, .aboutme__subtitle, .skills__subtitle, .contacts__text, .contacts__message .contacts-btn {
   font-size: 18px;
   line-height: 22px;
   color: #070707;
@@ -76,36 +76,64 @@ body {
 }
 
 .menu {
+  margin-top: 33px;
+}
+
+.menu a {
+  text-decoration: none;
+}
+
+.menu li {
+  position: relative;
+  list-style: none;
+}
+
+.menu__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-top: 33px;
-  position: relative;
 }
 
-.menu::after {
-  content: ' ';
-  position: absolute;
-  width: 945px;
-  height: 0px;
-  top: 55px;
-  border: 1px solid #828282;
-  -webkit-transform: matrix(1, 0, 0, 1, 0, 0);
-          transform: matrix(1, 0, 0, 1, 0, 0);
+.menu__list li:hover .sub-menu__list {
+  display: block;
 }
 
 .menu__link {
-  text-decoration: none;
-  font-size: 18px;
-  line-height: 22px;
   font-weight: bold;
   color: #828282;
 }
 
-.menu__link-active {
+.portfolio::after {
+  content: " ";
+}
+
+.sub-menu__list {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 10px;
+  padding: 10px 0 0 0;
+}
+
+.sub-menu__list > li {
+  background-color: #828282;
+  display: inline-block;
+  padding: 5px 5px;
+  min-width: 60px;
+  text-align: center;
+}
+
+.sub-menu__link {
+  color: #F6F6F6;
+  text-align: center;
+}
+
+.sub-menu__list li:hover .sub-menu__link {
+  display: block;
+  background-color: #f6f6f6;
   color: #070707;
 }
 
@@ -128,6 +156,7 @@ body {
 }
 
 .header__subtitle {
+  padding-right: 100px;
   margin-top: 127px;
 }
 
