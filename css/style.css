@@ -221,10 +221,6 @@ body {
   margin-bottom: 110px;
 }
 
-.skills__column {
-  padding: 0 55px;
-}
-
 .hyper__text-stars > img:nth-last-child(-n+2) {
   content: url(../img/free_star.png);
 }
@@ -307,10 +303,6 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-}
-
-.contacts__telegram a:hover {
-  background: #d3246b;
 }
 
 .social {
