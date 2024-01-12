@@ -3,44 +3,31 @@
   padding: 0;
 }
 
-
-/*body {
-  background: lightgrey;
-  height: 100%;
-}*/
-
-.containers {
-  position: relative;
+.wrapper {
   min-height: 100%;
-  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.contents {
-  min-height: calc(100vh - 220px);
-}
-
-.contents>p {
-  margin: 10px auto;
-  font: 30px Lobster;
-  text-align: center;
-}
-
-
-/*Шапка*/
-
-header {
-  position: relative;
+.header {
   height: 85px;
-  width: 100%;
   background-image: url(../img/im0.jpg);
+  display: flex;
+  justify-content: space-between;
 }
-
-header img {
-  float: left;
-  margin: 23px 0 12px 100px;
+.logo {
+  display: flex;
+  align-items: center;
+  margin-left: 100px;
 }
-
-header p {
+.social {
+  padding: 10px 100px;
+}
+.header img {
+  padding-bottom: 10px;
+}
+.header p {
   display: inline-block;
   padding: 15px 10px;
   font-family: Lobster;
@@ -48,19 +35,24 @@ header p {
   font-size: 40px;
 }
 
-.social {
-  float: right;
+
+.contents {
+  min-height: calc(100vh - 220px);
 }
-
-
-/*конец шапки*/
-
+._container {
+  width: 1440px;
+}
+.contents > p {
+  margin: 10px auto;
+  font: 30px Lobster;
+  text-align: center;
+}
 
 /*меню*/
 
-aside {
-  clear: both;
-  position: relative;
+.menu {
+  /* clear: both;
+  position: relative; */
   width: 100%;
   height: 57px;
   background-color: lightblue;
@@ -68,11 +60,11 @@ aside {
   z-index: 1;
 }
 
-aside>ul {
+.menu > ul {
   list-style-type: none;
 }
 
-aside>ul>li {
+.menu > ul > li {
   width: 10%;
   height: 35px;
   font: 14px "Prosto one";
@@ -89,7 +81,7 @@ a:hover {
   color: orange;
 }
 
-aside>ul>li>ul {
+.menu>ul>li>ul {
   padding: 0;
   display: none;
   list-style-type: none;
@@ -97,28 +89,22 @@ aside>ul>li>ul {
   text-align: left;
 }
 
-aside>ul>li:hover ul {
+.menu>ul>li:hover ul {
   display: block;
   background-color: lightblue;
   font-size: 10px;
   padding: 20px 0 20px 20px;
 }
 
-aside>ul>li>ul>li {
+.menu>ul>li>ul>li {
   margin-bottom: 5px;
   font-size: 20px;
 }
 
-
-/*конец меню*/
-
-
-/*тело*/
-
 .side {
-  clear: both;
+  /* clear: both; */
   width: 100%;
-  margin: 0 auto;
+  margin: 50px auto;
   font-family: "Prosto one";
 }
 
@@ -141,20 +127,21 @@ aside>ul>li>ul>li {
 
 .gambino {
   /*position: relative;*/
-  background-image: url(../img/tub.jpg);
+  background-image: url(../img/tub.png);
   background-repeat: no-repeat;
   background-position: center;
-  margin: -30px 0 20px 0;
+  margin: 50px 0 50px 0;
   width: 100%;
   height: 335px;
 }
 
 .afo {
   display: block;
-  position: relative;
+  /* position: relative; */
   top: 33px;
-  font: 20px Comfortaa;
-  margin-top: 4px;
+  font: 30px Comfortaa;
+  font-weight: 700;
+  margin-top: 50px;
   text-align: center;
   z-index: 0;
 }
